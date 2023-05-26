@@ -1,3 +1,9 @@
 ## Bookmarklets
 
-<h3><a href="javascript:(function() {   var currentUrl = window.location.href;   var urlParts = currentUrl.split('/');   var subdomain = urlParts[2].replace(/\./g, '-');   window.location.href = 'https://' + subdomain + '.proxy.wichita.edu/' + urlParts.slice(3).join('/'); })();">read via WSU</a></h3>
+Bookmarklets are neat. Install them by dragging the link into your browser's bookmarks bar. 
+
+### Read via WSU
+
+This bookmark will redirect you to your current page through the WSU Libraries proxy service. This should work on- or off-campus and will require you to log in. You will see when logging in that you are doing so on a WSU page, and this bookmarklet does _not_ access your login information. 
+
+<strong><a href="javascript:(function() {     var url = window.location.href;     var protocol = url.split('://')[0];     var rest = url.split('://')[1];     var domain = rest.split('/')[0];     var path = rest.split('/').slice(1).join('/');     var domainParts = domain.split('.');     var tld = domainParts[domainParts.length - 1];     var sld = domainParts.slice(0, -1).join('-');     var newUrl = protocol + '://' + sld + '-' + tld + '.proxy.wichita.edu/' + path;     window.location.href = newUrl; })();">read via WSU</a></strong>
