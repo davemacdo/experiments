@@ -10,6 +10,6 @@ This bookmark will redirect you to your current page through the WSU Libraries p
 
 ### "Crypto" means "Pretend"
 
-It does what it says. If you're reading an article about pretend money. This will make it more straightforward. 
+It does what it says. If you're reading an article about pretend money. This will make it more straightforward. Created in collaboration with ChatGPT ([transcript]([https://sharegpt.com/c/dxe6gPo](https://sharegpt.com/c/DqC5h9l))).
 
 <strong><a href="javascript:(function() {     function traverse(node) {         if (node.nodeType === Node.TEXT_NODE) {             node.textContent = node.textContent.replace(/crypto/gi, function(match) {                 return match.charAt(0) === 'C' ? 'Pretend' : 'pretend';             });         } else {             node.childNodes.forEach(traverse);         }     }     traverse(document.body); })();">crypto=pretend</a></strong>
